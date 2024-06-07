@@ -6,6 +6,8 @@
 });*/
 
 const titleClickHandler = function () {
+
+  event.preventDefault();
   
   const clickedElement = this;
 
@@ -34,9 +36,15 @@ const titleClickHandler = function () {
     activeArticle.classList.remove("active");
   }
 
-  /* get 'href' attribute from the clicked link */
+  /* [DONE] get 'href' attribute from the clicked link */
 
-  /* find the correct article using the selector (value of 'href' attribute) */
+  const articleSelector = clickedElement.getAttribute("href");
+
+  console.log(articleSelector);
+
+  /* [IN PROGRESS] find the correct article using the selector (value of 'href' attribute) */
+
+  
 
   /* add class 'active' to the correct article */
 };
