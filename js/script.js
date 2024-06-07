@@ -42,11 +42,16 @@ const titleClickHandler = function () {
 
   console.log(articleSelector);
 
-  /* [IN PROGRESS] find the correct article using the selector (value of 'href' attribute) */
+  /* [DONE] find the correct article using the selector (value of 'href' attribute) */
 
-  
+  const targetArticle = document.querySelector(articleSelector);
 
-  /* add class 'active' to the correct article */
+  console.log(targetArticle);
+
+  /* [IN PROGRESS] add class 'active' to the correct article */
+
+
+
 };
 
 const links = document.querySelectorAll(".titles a");
