@@ -47,7 +47,7 @@ const titleClickHandler = function () {
   const targetArticle = document.querySelector(articleSelector);
 
   console.log(targetArticle);
-
+ 
   /* [DONE] add class 'active' to the correct article */
 
   targetArticle.classList.add("active");
