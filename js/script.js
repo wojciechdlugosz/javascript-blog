@@ -74,16 +74,19 @@
 
     /* [DONE] get the article id */
 
+    /* [DONE] find the title element */
+
     const articles = document.querySelectorAll(optArticleSelector);
 
     //console.log(articles);
 
     for (let article of articles) {
         const articleId = article.getAttribute("id");
+        const articleTitle = article.querySelector(optTitleSelector).innerHTML;
         console.log(articleId);
+        console.log(articleTitle);
     }
 
-    /* find the title element */
     /* get the title from the title element */
     /* create HTML of the link */
     /* insert link into titleList */
