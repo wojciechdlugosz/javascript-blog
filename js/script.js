@@ -72,13 +72,17 @@
 
     /* [DONE] for each article */
 
+    /* [DONE] get the article id */
+
     const articles = document.querySelectorAll(optArticleSelector);
 
+    //console.log(articles);
+
     for (let article of articles) {
-        console.log("article");
+        const articleId = article.getAttribute("id");
+        console.log(articleId);
     }
 
-    /* get the article id */
     /* find the title element */
     /* get the title from the title element */
     /* create HTML of the link */
