@@ -68,14 +68,16 @@
     /* [DONE] remove contents of titleList */
 
     const titleList = document.querySelector(optTitleListSelector);
-
-    //console.log(titleList);
-
     titleList.innerHTML = '';
 
-    //console.log(titleList);
+    /* [DONE] for each article */
 
-    /* for each article */
+    const articles = document.querySelectorAll(optArticleSelector);
+
+    for (let article of articles) {
+        console.log("article");
+    }
+
     /* get the article id */
     /* find the title element */
     /* get the title from the title element */
