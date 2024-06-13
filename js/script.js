@@ -91,6 +91,5 @@ const titleClickHandler = function () {
   targetArticle.classList.add('active');
 };
 
-{
-  generateTitleLinks();
-}
+
+generateTitleLinks();
