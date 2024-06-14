@@ -161,13 +161,15 @@ function tagClickHandler(event){
 
   /* find all tag links with "href" attribute equal to the "href" constant */
   const tagLinksWithHref = document.querySelectorAll('a[href="' + href + '"]');
-  //console.log(tagLinksWithHref);
 
   /* START LOOP: for each found tag link */
+  for (let tagLinkWithHref of tagLinksWithHref) {
 
     /* add class active */
+    tagLinkWithHref.classList.add('active');
 
   /* END LOOP: for each found tag link */
+  }
 
   /* execute function "generateTitleLinks" with article selector as argument */
 }
