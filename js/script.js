@@ -160,6 +160,8 @@ function tagClickHandler(event){
   }
 
   /* find all tag links with "href" attribute equal to the "href" constant */
+  const tagLinksWithHref = document.querySelectorAll('a[href="' + href + '"]');
+  //console.log(tagLinksWithHref);
 
   /* START LOOP: for each found tag link */
 
