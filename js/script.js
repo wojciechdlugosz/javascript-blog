@@ -50,11 +50,6 @@ const titleClickHandler = function () {
 
   const clickedElement = this;
 
-  //console.log("clickedElement (with plus): " + clickedElement);
-
-  //console.log("Link was clicked!");
-  //console.log(event);
-
   /* [DONE] remove class 'active' from all article links  */
 
   const activeLinks = document.querySelectorAll('.titles a.active');
@@ -139,13 +134,15 @@ generateTags();
 // ... ///
 
 function tagClickHandler(event){
-  
+
   /* prevent default action for this event */
   event.preventDefault();
 
   /* make new constant named "clickedElement" and give it the value of "this" */
+  const clickedElement = this;
 
   /* make a new constant "href" and read the attribute "href" of the clicked element */
+  const href = clickedElement.getAttribute('href');
 
   /* make a new constant "tag" and extract tag from the "href" constant */
 
@@ -169,13 +166,18 @@ function tagClickHandler(event){
 }
 
 function addClickListenersToTags(){
+
   /* find all links to tags */
+  const linksToTag = document.querySelectorAll('.list a[href^="#tag-"]');
 
   /* START LOOP: for each link */
+  for (let linkToTag of linksToTag) {
 
     /* add tagClickHandler as event listener for that link */
+    linkToTag.addEventListener('click', tagClickHandler);
 
   /* END LOOP: for each link */
+  }
 }
 
 addClickListenersToTags();
