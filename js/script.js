@@ -5,6 +5,7 @@ const templates = {
   articleTagLink: Handlebars.compile(document.querySelector('#template-article-tag-link').innerHTML),
   articleAuthorLink: Handlebars.compile(document.querySelector('#template-article-author-link').innerHTML),
   tagCloudLink: Handlebars.compile(document.querySelector('#template-tag-cloud-link').innerHTML),
+  authorListLink: Handlebars.compile(document.querySelector('#template-author-list-link').innerHTML)
 };
 
 const opts = {
@@ -323,16 +324,21 @@ function generateAuthors(){
   /* find list of authors in right column */
   const authorList = document.querySelector(opts.optAuthorsListSelector);
 
-  let html = '';
+  //let html = '';
+  const allAuthorsData = {author: []};
 
   /* add links authors and count articles */
   for (let author in allAuthors) {
-    const authorHTML = '<li><a href="#author-' + author + '"><span class="author-name">' + author + '</span> (' + allAuthors[author] + ')</a></li>';
-    html += authorHTML;
+    //const authorHTML = '<li><a href="#author-' + author + '"><span class="author-name">' + author + '</span> (' + allAuthors[author] + ')</a></li>';
+    //html += authorHTML;
+    allAuthorsData.author.push({author: author, count: allAuthors[author]});
   }
 
   /*  add html */
-  authorList.innerHTML = html;
+  //authorList.innerHTML = html;
+
+  /* add template to html */
+  authorList.innerHTML = templates.authorListLink(allAuthorsData);
 
 }
 
